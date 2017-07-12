@@ -1,12 +1,11 @@
-var express = require('express');
-var fs = require('fs');
-var tr2 = require('through2');
+var express = require('express')
+var bodyParser = require('body-parser')
+var app = express()
 
-var app = express();
+app.use(bodyParser.urlencoded({extended: false}))
 
-app.get('/', function(req, res){
- // res.send(ajay.html);
- app.use(express.static('ajay.html'));
-});
+app.post('/form', function(req, res) {
+  res.send(req.body.str.split('').reverse().join(''))
+})
 
-app.listen(3000);
+app.listen(process.argv[2] || 3000);

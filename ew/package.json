@@ -9,8 +9,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "pug": "^2.0.0-rc.2",
+    "stylus": "^0.54.5",
     "through2": "^2.0.3"
   }
 }
